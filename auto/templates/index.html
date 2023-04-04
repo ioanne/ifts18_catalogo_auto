@@ -9,15 +9,14 @@
 <!-- 127.0.0.1:8000/autos/ -->
 <!-- <a href="{# url 'auto:index' #}">Ir al listado de autos</a> -->
 <body>
-    {% for auto in autos %}
-    <ul>
-        <li>
-            {{auto.marca}}
-        </li>
-        <li>
-            {{auto.modelo}}
-        </li>
-    </ul>
-    {% endfor %}
+    Cantidad de autos: {{autos|length}}
+    <ol>
+        {% for auto in autos %}
+            <li>
+                <p>Marca: {{auto.marca}}</p>
+                <p>Modelo: {{auto.modelo}}</p>
+            </li>
+        {% endfor %}
+    </ol>
 </body>
 </html>

@@ -26,6 +26,7 @@ class ListarFiatTemplateView(TemplateView):
 
 def fucion_autos(request):
     """ Lista basada en funciones para listar todos los autos """
-    return render(request, 'index.html', {
+    response =  render(request, 'index.html', {
         'autos': Auto.objects.all(),
     })
+    return response

@@ -9,7 +9,7 @@ class WithoutAudi(WithoutDeleteManager):
 
 
 class Auto(Audit):
-    marca = models.ForeignKey("marca.Marca", on_delete=models.DO_NOTHING)
+    marca = models.ForeignKey("marca.Marca", related_name='marca', on_delete=models.DO_NOTHING)
     modelo = models.CharField(max_length=50)
     color = models.CharField(max_length=50)
     año = models.IntegerField()
@@ -23,9 +23,11 @@ class Auto(Audit):
         # A todo lo anterior le suma el filtro de color rojo
         return self.objects.filter(color="rojo")
         
+    # How to show Query
+    # Auto.objects.all().query
+    # print(Auto.objects.create(marca_id=1, modelo='A4', color='rojo', año=2019, precio=100000).query)
+    # Auto.objects.create()
 
-
-    
 # auto = Auto()
 # auto.objects = models.Manager() # inyectando la dependencia models.Manager()
 # auto.objects.all()

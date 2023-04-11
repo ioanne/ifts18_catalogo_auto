@@ -1,0 +1,37 @@
+
+# git status
+
+# git add <path_archivo>
+# git commit -m "Mensaje del commit"
+# git commit --amend # Para modificar el commit anterior
+
+# git push origin <nombre_de_la_rama>
+
+
+# si queremos guardar nuestro trabajo para despues
+# podemos utilizar el stash de git.
+# git stash save "Mensaje del stash"
+
+# Para ver los stash
+# git stash list
+
+# Para recuperar el stash
+# git stash pop stash@{0}
+
+
+
+# minimo 2 ramas
+
+# develop / master
+# dev / main
+
+# 10 personas agregando codigo a develop.
+# 20 commits por día.
+
+
+# 100 commits por sprint.
+# 
+# Llevamos los 100 commits de develop a master haciendo un "release".
+# Previamente al release, pasa por QA, se prueba y se arreglan los bugs, si todo funciona, recien ahí hacemos el release.
+# En esta instancia develop y master estan al día.
+

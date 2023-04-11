@@ -31,3 +31,4 @@ class Auto(Audit):
 # auto = Auto()
 # auto.objects = models.Manager() # inyectando la dependencia models.Manager()
 # auto.objects.all()
+
